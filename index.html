@@ -5,10 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Website</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4cff00;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-image: url("https://i1.sndcdn.com/artworks-I60hJ6do961mz1m6-9TacMw-t500x500.jpg");
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(5px);
+            color: #fff;
+        }
+
+        h1 {
+            color: #fff;
+            margin: 10px 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        a {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            color: #000;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+            background-color: rgba(76, 255, 0, 1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+            a:hover {
+                background-color: rgba(76, 255, 0, 1);
+                transform: scale(1.1);
+            }
+    </style>
 </head>
 <body>
     <h1>Welcome to the Army's Integrated School Website</h1>
-    <h1>By:Jovan Rollon still in BETA</h1>
-    <a href="login.html">Login</a> | <a href="signup.html">Sign Up</a>
+    <h1>By: Jovan Rollon, still in BETA</h1>
+    <div class="links">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
 </body>
 </html>

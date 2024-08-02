@@ -3,20 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            font-size: 18px;
+            font-weight: bold;                
+        }
+
+            body::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("https://i1.sndcdn.com/artworks-I60hJ6do961mz1m6-9TacMw-t500x500.jpg");
+                background-size: cover;
+                background-position: center;
+                filter: blur(5px);
+                z-index: -1;              
+            }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e711a;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+            .back-button:hover {
+                background-color: #333;
+                color: #fff;
+                border-color: #333;
+                transform: scale(1.05);
+            }
+
+            .back-button::before {
+                content: '←';
+                margin-right: 8px;
+            }
+
+        .form-container {
+            position: relative;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            z-index: 10;
+        }
+
+            .form-container::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwVPP3B0P9tEzebKBtQ0paD6mW8W-jytKjuA&s");
+                background-position: center;
+                background-size: cover;
+                filter: blur(2px);
+                z-index: -1;
+                border-radius: 8px;
+            }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .invisible-label {
+            visibility: hidden;
+            height: 1px;
+            margin: 10px 0;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: transparent;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            color: #007bff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+
+            button:hover {
+                background-color: #007bff;
+                color: #fff;
+                transform: scale(1.05);
+            }
+    </style>
 </head>
 <body>
     <h1>Sign Up</h1>
-    <form id="signup-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Sign Up</button>
-    </form>
+    <div class="form-container">
+        <form id="signup-form">
+            <label for="invisible1" class="invisible-label">Invisible Label 1:</label>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="invisible1" class="invisible-label">Invisible Label 1:</label>
+
+            <button type="submit">Sign Up</button>
+
+            <label for="invisible1" class="invisible-label">Invisible Label 1:</label>
+        </form>
+        <a href="javascript:history.back()" class="back-button">Back</a>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
